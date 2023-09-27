@@ -7,15 +7,37 @@
 
 import UIKit
 
-class secondViewController: UIViewController {
+var numberOne = 6
+var numberTwo = 10
 
+
+class secondViewController: UIViewController {
+    @IBOutlet weak var labelOneSecondVC: UILabel!
+    
+    @IBOutlet weak var labelTwoSecondVC: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        labelOneSecondVC.text = "The Answer is:"
+        
     }
     
-
+    @IBAction func calculateButtonPressed(_ sender: Any)
+    {
+        
+        labelTwoSecondVC.text = "\(numberOne + numberTwo)"
+        if numberOne < numberTwo
+        {
+            self.view.backgroundColor = UIColor.systemPink
+        }
+        else
+        {
+            self.view.backgroundColor = UIColor.systemBlue
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
